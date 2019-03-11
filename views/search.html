@@ -1,0 +1,13 @@
+<h2 class="title">{{ search.title }}</h2>
+<form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="Usuário..." ng-model="search.usuario" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="button" ng-click="search.searchUser()">Pesquisa</button>
+</form>
+
+<div style="max-width: 20rem">
+    <app-user 
+        ng-show="search.teste"
+        name="search.usuarioShow.name || 'USUÁRIO NÃO ENCONTRADO'" 
+        image="search.usuarioShow.avatar_url"></app-user>
+    <a href="{{search.usuarioShow.blog}}" ng-show="search.teste" target="_blank">{{search.usuarioShow.name || 'USUÁRIO NÃO ENCONTRADO'}}</a>
+</div>
